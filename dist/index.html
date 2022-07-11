@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="author" content="Команда разработчиков collary.ru" />
 	<meta name="copyright" content="© collary.ru, дизайн и разработка, 2018" />
-	<link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="icon" type="image/png" href="./images/favicon/favicon.png" />
 
 	<!-- STYLESHEETS :: FONTS -->
 	<link
@@ -21,6 +21,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- STYLESHEETS :: TEMPLATE -->
 	<link href="css/style.css" rel="stylesheet">
+	<script src="./js/main.js" defer></script>	
 </head>
 
 <body>
@@ -72,7 +73,7 @@
 						<span></span>
 						<span></span>
 					</div>
-					<a href="#callback" class="callback-btn fancyboxModal hidden-xs">Заказать звонок</a>
+					<a href="#callback" class="callback-btn popup-btn fancyboxModal hidden-xs">Заказать звонок</a>
 
 					<!-- * * * * * * Top menu * * * * * * -->
 					<div class="top-menu visible-md-inline-block visible-lg-inline-block">
@@ -163,10 +164,10 @@
 					<div class="row services-carousel">
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Аварийный выезд"></a>
-								<div class="img-wrapper">
-									<img src="images/service1.jpg">
+								<div class="img-wrapper ">
+									<img   src="images/service1.jpg">
 								</div>
 								<div class="element-content">
 									<div class="title-h5 upper">Аварийный выезд</div>
@@ -180,7 +181,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Монтаж или замена электропроводки"></a>
 								<div class="img-wrapper">
 									<img src="images/service2.jpg">
@@ -197,7 +198,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Ремонт, замена, перенос розеток"></a>
 								<div class="img-wrapper">
 									<img src="images/service3.jpg">
@@ -214,7 +215,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Замена электросчетчика"></a>
 								<div class="img-wrapper">
 									<img src="images/service4.jpg">
@@ -231,7 +232,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Установка, замена люстры"></a>
 								<div class="img-wrapper">
 									<img src="images/service5.jpg">
@@ -248,7 +249,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4">
 							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
+								<a class="absolute popup-btn fancyboxModal" href="#application"
 									data-application="Установка светильников"></a>
 								<div class="img-wrapper">
 									<img src="images/service6.jpg">
@@ -282,7 +283,7 @@
 			<div class="container text-center">
 				<span class="f30 helios">Не нашли нужной услуги?</span>
 				<div class="push20 visible-xs visible-sm"></div>
-				<a class="button button-services fancyboxModal invert" href="#feedback">Звоните, мы обязательно вам
+				<a class="button button-services popup-btn fancyboxModal invert" href="#feedback">Звоните, мы обязательно вам
 					поможем!</a>
 			</div>
 			<div class="push50"></div>
@@ -621,8 +622,9 @@
 
 	<div class="modal-overlay"></div>
 	<!-- * * * * * * Callback modal block * * * * * * -->
-	<div class="modal-callback" id="callback">
-		<div class="modal-close">
+	<div class="modal-callback popup" id="callback">
+		<div class="popup-content">
+			<div class="modal-close popup-close">
 			<img src="images/close_icon_green.svg" alt="modal-close">
 		</div>
 		<div class="title-h2">Мы перезвоним через 5 минут!</div>
@@ -641,6 +643,7 @@
 					<input type="submit" class="button btn feedback" value="Отправить" />
 				</div>
 			</form>
+		</div>
 		</div>
 	</div>
 	<!-- * * * * * * Callback modal block: end * * * * * * -->
