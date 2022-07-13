@@ -630,6 +630,7 @@ a.absolute {
 .num-section {
 	background: url(../images/num-section.jpg) 0 0 no-repeat;
 	background-attachment: fixed;
+	background-size: cover;
 	color: #fff;
 	position: relative;
 }
