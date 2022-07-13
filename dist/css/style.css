@@ -1091,7 +1091,9 @@ video#video_background {
 /**** /. steps section *****/
 
 /**** services section *****/
-
+.swiper-container {
+	overflow: hidden;
+}
 .services-arrow {
 	display: flex;
 	justify-content: center;
