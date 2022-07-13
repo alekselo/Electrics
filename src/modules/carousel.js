@@ -1,5 +1,7 @@
+import Swiper from "swiper/bundle";
+
 const carousel = () => {
-  new Swiper(".swiper-container", {
+  const swiper = new Swiper(".swiper-container", {
     navigation: {
       nextEl: ".arrow-right",
       prevEl: ".arrow-left",
@@ -18,6 +20,7 @@ const carousel = () => {
       },
     },
   });
+  swiper();
 };
 
 export default carousel;
