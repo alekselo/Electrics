@@ -6,7 +6,8 @@ const modal = () => {
   const modalOverlay = document.querySelector(".modal-overlay");
 
   buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
       if (document.documentElement.offsetWidth > 768) {
         modal.style.display = "block";
         modalOverlay.style.display = "block";

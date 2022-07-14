@@ -871,7 +871,7 @@ hr.white {
 }
 .top-slider .item-active {
 		/* display: block; */
-		webkit-transform: scale(1);
+		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		-o-transform: scale(1);
 		transform: scale(1);
@@ -965,7 +965,7 @@ video#video_background {
 		transition: 0.5s;
 	}
 	.top-slider .table.active {
-		webkit-transform: scale(1);
+		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		-o-transform: scale(1);
 		transform: scale(1);
@@ -1091,7 +1091,9 @@ video#video_background {
 /**** /. steps section *****/
 
 /**** services section *****/
-
+.swiper-container {
+	overflow: hidden;
+}
 .services-arrow {
 	display: flex;
 	justify-content: center;
