@@ -1,6 +1,5 @@
 const smoothAnchor = () => {
   const anchors = document.querySelectorAll("a.scroll-to");
-  console.log(anchors);
   anchors.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();

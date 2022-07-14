@@ -1257,4 +1257,15 @@ video#video_background {
 		clear: both;
 	}
 }
+
+.error {
+	outline: 2px solid red;
+}
+.error:focus {
+	outline: 2px solid red;
+}
+.black {
+	color: black;
+}
+
 /**** /. services section *****/
