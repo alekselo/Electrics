@@ -4,6 +4,7 @@ const sendForms = () => {
   const statusBlock = document.createElement("div");
   const loadText = "Загрузка...";
   const errorText = "Ошибка! Введите корректные данные!";
+  const errorType = "Форма не отправлена! Обратитесь к разработчику!";
   const successText = "Спасибо! Наш менеджер с Вами свяжется!";
   const regUserName = /^[а-яА-ЯёЁ]{2,}$/;
   const regUserPhone = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
@@ -62,6 +63,7 @@ const sendForms = () => {
 
     return success;
   };
+  // https://jsonplaceholder.typicode.com/posts
   const sendData = (data) => {
     return fetch("server.php", {
       method: "POST",
@@ -76,12 +78,17 @@ const sendForms = () => {
     formData.forEach((val, key) => {
       formBody[key] = val;
     });
-    statusBlock.classList.add("white");
+    statusBlock.classList.add("black");
     statusBlock.textContent = loadText;
     form.append(statusBlock);
 
     if (validate(formElements)) {
       sendData(formBody)
+        .then((response) => {
+          if (response.status < 200 || response.status >= 300) {
+            throw new Error("status network not 200");
+          }
+        })
         .then((data) => {
           statusBlock.textContent = successText;
           formElements.forEach((input) => {
@@ -93,7 +100,7 @@ const sendForms = () => {
           });
         })
         .catch((error) => {
-          statusBlock.textContent = errorText;
+          statusBlock.textContent = errorType;
           setTimeout(() => {
             statusBlock.textContent = "";
           }, 3000);
